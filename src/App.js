@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { fetchWeather } from './api/fetchWeather';
 import './App.css';
 
@@ -6,6 +6,19 @@ const App = () => {
     const [query, setQuery] = useState('');
     const [weather, setWeather] = useState({});
     
+    useEffect(() => {
+        const func = async () => {
+            let params = new URLSearchParams(window.location.search);
+            let searchQuery = params.get('search');
+
+            if(searchQuery) {
+                const data = await fetchWeather(searchQuery);
+                setWeather(data);
+            }
+        }
+        func();
+    }, []);
+
     const search = async (e) => {
         if(e.key === 'Enter'){
             const data = await fetchWeather(query);
@@ -16,7 +29,7 @@ const App = () => {
 
     return (
         <div className="main-container">
-            <input type="text" className="search" placeholder="Search..." value={query} onChange={(e) => setQuery(e.target.value)} onKeyPress={search} />
+            <input type="text" className="search" placeholder="Find Weather by City Name..." value={query} onChange={(e) => setQuery(e.target.value)} onKeyPress={search} />
             {weather.main && (
                 <div className="city">
                     <h2 className="city-name">
