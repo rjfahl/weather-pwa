@@ -28,6 +28,7 @@ html, body, #root {
     border: none;
     margin-bottom: 5%;
     text-align: center;
+    margin: 0px 15px 32px 15px;
 }
 
 .city {
@@ -86,6 +87,7 @@ p {
 @media only screen and (max-width: 600px) {
     .search {
         padding: 20px 15%;
+        width: 180px;
     }
 
     .city {
