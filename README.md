@@ -1,3 +1,5 @@
+![Build and deploy Node.js app to Azure Web App - rob-portfolio](https://github.com/rjfahl/react-pwa/workflows/Build%20and%20deploy%20Node.js%20app%20to%20Azure%20Web%20App%20-%20rob-portfolio/badge.svg)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
