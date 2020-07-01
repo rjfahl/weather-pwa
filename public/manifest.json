@@ -1,6 +1,6 @@
 {
-    "short_name": "Weather App",
-    "name": "Weather App PWA",
+    "short_name": "Weather",
+    "name": "Weather",
     "icons": [
         {
             "src": "/images/logo.png",
@@ -15,10 +15,11 @@
     "scope": "/",
     "shortcuts": [
         {
-            "name": "Fort Wayne Weather",
+            "name": "Fort Wayne",
             "short_name": "The Fort",
             "description": "View the weather in Fort Wayne Indiana",
-            "url": "/?search=Fort%20Wayne"
+            "url": "/?search=Fort%20Wayne",
+            "icons": [{ "src": "/images/logo.png", "sizes": "192x192" }]
         }
     ]
 }
