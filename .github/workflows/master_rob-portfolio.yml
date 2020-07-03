@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - rob-portfolio
+name: Build and deploy Node.js app to Azure Web App - weather-pwa
 
 on:
   push:
@@ -28,7 +28,7 @@ jobs:
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v1
       with:
-        app-name: 'rob-portfolio'
+        app-name: 'weather-pwa'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_a290bbc1d3144a1892d2751d9d1b6b89 }}
         package: ./build
