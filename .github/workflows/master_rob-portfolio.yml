@@ -31,4 +31,4 @@ jobs:
         app-name: 'rob-portfolio'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_a290bbc1d3144a1892d2751d9d1b6b89 }}
-        package: .
+        package: ./build
