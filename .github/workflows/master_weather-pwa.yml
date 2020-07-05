@@ -31,4 +31,4 @@ jobs:
         app-name: 'weather-pwa'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_4a179867740341d8ac35cb6bd87f32c1 }}
-        package: ./build
+        package: .
