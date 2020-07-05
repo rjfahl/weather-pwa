@@ -15,8 +15,7 @@
     "nodemon": "^2.0.4"
   },
   "scripts": {
-    "start": "yarn run build && (yarn start-server)",
-    "start-server": "nodemon server.js",
+    "start": "nodemon server.js",
     "start-client": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
