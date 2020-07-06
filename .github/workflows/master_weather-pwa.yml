@@ -29,6 +29,7 @@ jobs:
       run: |
         copy web.config build
         copy server.js build
+        copy package.json build
 
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v1
