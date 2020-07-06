@@ -25,10 +25,14 @@ jobs:
         npm install
         npm run build --if-present
 
+    - name: copy web.config
+      run: |
+        copy web.config build
+
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v1
       with:
         app-name: 'weather-pwa'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_4a179867740341d8ac35cb6bd87f32c1 }}
-        package: .
+        package: ./build
