@@ -25,9 +25,10 @@ jobs:
         npm install
         npm run build --if-present
 
-    - name: copy web.config
+    - name: copy express server files
       run: |
         copy web.config build
+        copy server.js build
 
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v1
