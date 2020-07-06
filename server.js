@@ -5,6 +5,6 @@ const path = require("path");
 app.use(express.static(path.join(__dirname, "build")));
 app.use(express.static("public"));
 
-app.listen(5000, () => {
-    console.log("server started on port 5000");
+app.listen(process.env.PORT || 5000, () => {
+    console.log("server started on port " + process.env.PORT || 5000);
 });
