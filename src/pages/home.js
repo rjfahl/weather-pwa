@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { fetchWeather } from './api/fetchWeather';
+import { fetchWeather } from '../api/fetchWeather';
 
 const Home = () => {
     const [query, setQuery] = useState('');

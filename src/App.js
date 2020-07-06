@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css';
-import Home from "./Home";
-import About from "./About";
+import './app.css';
+import Home from "./pages/home";
+import About from "./pages/about";
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 
 const App = () => {
@@ -17,7 +17,6 @@ const App = () => {
                     <Route path="/about" component={About} />
                 </Switch>
             </Router>
-            
         </div>
     );
 }
