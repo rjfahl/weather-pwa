@@ -27,7 +27,7 @@ const Home = () => {
     }
 
     return (
-        <div>
+        <div className="home-page">
             <input type="text" className="search" placeholder="Find Weather by City Name..." value={query} onChange={(e) => setQuery(e.target.value)} onKeyPress={search} />
             {weather.main && (
                 <div className="city">
