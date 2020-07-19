@@ -20,7 +20,7 @@
             "short_name": "The Fort",
             "description": "View the weather in Fort Wayne Indiana",
             "url": "/?search=Fort%20Wayne",
-            "icons": [{ "src": "/images/logo.png", "sizes": "192x192" }]
+            "icons": [{ "src": "/images/logo.png", "sizes": "192x192", "purpose": "maskable" }]
         }
     ]
 }
