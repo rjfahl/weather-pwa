@@ -12,3 +12,16 @@ export const fetchWeather = async (query) => {
 
     return data;
 }
+
+export const getNotification = (subscription) => {
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.ready.then(function(registration) {
+          if (!registration.pushManager) return;
+    
+          registration.pushManager.getSubscription().then(sub => {
+            if (sub) axios.post(`${process.env.REACT_APP_API_URL}/notifications`, sub);
+          })
+        })
+        .catch(e => console.error('An error ocurred during Service Worker registration.', e))
+    }
+}

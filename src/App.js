@@ -8,14 +8,14 @@ const App = () => {
     return (
         <div className="main-container">
             <Router>
-                <header>
-                    <Link className="header-link" to="/">Weather</Link>
-                    <Link className="header-link" to="/about">About</Link>
-                </header>
                 <Switch>
                     <Route exact path="/" component={Home} />
                     <Route path="/about" component={About} />
                 </Switch>
+                <footer>
+                    <Link className="footer-link" to="/">Weather</Link>
+                    <Link className="footer-link" to="/about">About</Link>
+                </footer>
             </Router>
         </div>
     );

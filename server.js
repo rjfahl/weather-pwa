@@ -5,7 +5,6 @@ const dotenv = require('dotenv')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const webpush = require('web-push')
-
 dotenv.config()
 
 app.use(cors())
@@ -22,12 +21,25 @@ app.get('*', function(req, res) {
 app.post('/notifications/subscribe', (req, res) => {
   const subscription = req.body
 
-  console.log(subscription)
-
   const payload = JSON.stringify({
     title: 'Hello!',
     body: 'It works.',
   })
+
+  webpush.sendNotification(subscription, payload)
+    .then(result => console.log(result))
+    .catch(e => console.log(e.stack))
+
+  res.status(200).json({'success': true})
+});
+
+app.post('/notifications', (req, res) => {
+  const subscription = req.body
+
+  const payload = JSON.stringify({
+    title: 'Alert!',
+    body: 'Notification per request',
+  });
 
   webpush.sendNotification(subscription, payload)
     .then(result => console.log(result))

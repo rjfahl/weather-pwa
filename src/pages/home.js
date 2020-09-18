@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { fetchWeather } from '../api/fetchWeather';
+import { fetchWeather, getNotification } from '../api/fetchWeather';
 
 const Home = () => {
     const [query, setQuery] = useState('');
@@ -45,6 +45,7 @@ const Home = () => {
                     </div>
                 </div>
             )}
+            <button type="button" className="send-notification" onClick={getNotification}>Send Notification</button>
         </div>
     );
 }
