@@ -45,6 +45,7 @@ html, body, #root {
     background-color: white;
     border: none;
     box-shadow: none;
+    margin-top: 24px;
 }
 
 .send-notification:hover{
