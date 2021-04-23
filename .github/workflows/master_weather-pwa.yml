@@ -28,7 +28,7 @@ jobs:
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v1
       with:
-        app-name: 'weather-pwa'
+        app-name: 'weather-arm-template'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_4a179867740341d8ac35cb6bd87f32c1 }}
+        publish-profile: ${{ secrets.AZURE_ARM_TEMPLATE_PUBLISH_PROFILE }}
         package: .
